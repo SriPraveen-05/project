@@ -10,14 +10,14 @@ function addTask(){
         listcontainer.appendChild(li);
         let span = document.createElement("span");
         span.innerHTML = "\u00d7";
-        li.appendchild(span);
+        li.appendChild(span);
     }
     inputbox.value = "";
     saveData();
 }
 listcontainer.addEventListener("click",function(e){
     if(e.target.tagName==="LI"){
-        e.target.classlist.toogle("checked");
+        e.target.classList.toggle("checked");
         saveData();
     }
     else if(e.target.tagName==="SPAN"){
